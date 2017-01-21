@@ -1,10 +1,19 @@
 <template>
-     
+    <div class="container">
+        <div class="jumbtron">
+            <todoList></todolist>
+        </div>
+    </div>
 </template>
 
 <script>
+    import TodoList from './TodoList'
+
     export default {
-        name: 'pil-body',
+        name: 'demoApps',
+        components: {
+            TodoList
+        },
         data() {
             return {
                 msg: 'Welcome to Your Vue.js App'

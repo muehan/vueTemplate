@@ -1,18 +1,19 @@
 <template>
   <div id="app">
-    <navigation></navigation
-    >
-    <!--<hello></hello>-->
+    <navigation></navigation>
+    <demoApps></demoApps>
   </div>
 </template>
 
 <script>
     import Navigation from './components/Navigation'
+    import DemoApps from './components/DemoApps'
 
     export default {
         name: 'app',
         components: {
-            Navigation
+            Navigation,
+            DemoApps
         }
     }
 </script>
