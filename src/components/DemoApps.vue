@@ -1,6 +1,7 @@
 <template>
     <div class="container">
-        <div class="jumbtron">
+        <div class="jumbotron">
+            <h2>Todo List Demo</h2>
             <todoList></todolist>
         </div>
     </div>
