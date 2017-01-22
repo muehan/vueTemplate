@@ -29,7 +29,7 @@
         data() {
             return {
                 allUsers: this.loadUsers(),
-                filterText: '*'
+                filterText: ''
             }
         },
         methods: {
@@ -42,17 +42,22 @@
                 });
             },
             filteredUsers: function(users, filter) {
+
+                // ignore first call
                 if (!users) {
                     return;
                 }
 
-                if (filter === "*") {
+                if (filter === "*" || filter === "") {
                     return users;
                 }
 
+                // hopefully there is a better way?
                 return users.filter(function(user) {
-                    console.log('filtertext' + filter);
-                    if (user.name.includes(filter)) {
+                    if (user.id == filter ||
+                        user.name.toLowerCase().includes(filter.toLowerCase()) ||
+                        user.username.toLowerCase().includes(filter.toLowerCase()) ||
+                        user.email.toLowerCase().includes(filter.toLowerCase())) {
                         return user;
                     }
                 })
