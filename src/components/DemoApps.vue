@@ -1,10 +1,10 @@
 <template>
     <div class="container">
-        
-      <todoList></todolist>
-      <users></users>
-      <issues></issues>
-
+        <createTodo></createTodo>
+        <CurrentTodos></CurrentTodos>
+        <todoList></todolist>
+        <users></users>
+        <issues></issues>
     </div>
 </template>
 
@@ -12,13 +12,17 @@
     import TodoList from './apps/TodoList'
     import Users from './apps/Users'
     import Issues from './apps/Issues'
+    import createTodo from './apps/createTodo'
+    import CurrentTodos from './apps/CurrentTodos'
 
     export default {
         name: 'demoApps',
         components: {
             TodoList,
             Users,
-            Issues
+            Issues,
+            createTodo,
+            CurrentTodos
         }
     }
 </script>

@@ -23,14 +23,14 @@
     import Vue from 'vue';
     import Resource from 'vue-resource';
 
-    import JIRA_BASE_URL from './../../config'
+    import * as config from './../../config'
 
     Vue.use(Resource);
 
     export default {
         name: 'issues',
         http: {
-            root: "https://somejira/rest/api/2",
+            root: config.JIRA_BASE_URL,
             headers: {
                 Authorization: "Basic sometocken"
             }
@@ -44,7 +44,7 @@
         },
         methods: {
             loadIssues: function() {
-                this.$http.get('search?jql=somefancyQuery').then(response => {
+                this.$http.get('search?jql=somejqlquery').then(response => {
                     this.issues = response.body.issues;
                     this.totalIssues = response.body.total;
                     return response.body;
