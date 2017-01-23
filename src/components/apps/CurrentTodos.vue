@@ -12,9 +12,6 @@
 <script>
     export default {
         name: 'currenttodos',
-        methods: {
-
-        },
         computed: {
             todos() {
                 return this.$store.getters.todos

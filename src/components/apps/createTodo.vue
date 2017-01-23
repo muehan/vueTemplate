@@ -1,24 +1,21 @@
 <template>
     <div id="get-todo" class="jumbotron">
-        <input class="form-control" :value="newTodo" @change="getTodo" placeholder="I need to...">
-        <button class="btn btn-primary" @click="addTodo">Add Todo</button>
+        <input class="form-control" v-model="newtodo" placeholder="I need to..."> <!--@change="getTodo"-->
+        <button class="btn btn-primary" v-on:click="addTodo">Add Todo</button>
     </div>
 </template>
 <script>
     export default {
         name: 'createTodo',
-        methods: {
-            getTodo(e) {
-                this.$store.dispatch('getTodo', e.target.value)
-            },
-            addTodo() {
-                this.$store.dispatch('addTodo')
-                this.$store.dispatch('clearTodo')
+        data() {
+            return {
+                newtodo: ""
             }
         },
-        computed: {
-            newTodo() {
-                return this.$store.getters.newTodo
+        methods: {
+            addTodo() {
+                this.$store.dispatch('addTodo', this.newtodo);
+                this.newtodo = "";
             }
         }
     }

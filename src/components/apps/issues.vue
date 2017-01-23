@@ -49,7 +49,7 @@
                     this.totalIssues = response.body.total;
                     return response.body;
                 }, (response) => {
-                    alert("Error");
+                    // alert("Error");
                 });
             }
         }

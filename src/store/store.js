@@ -7,30 +7,19 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     state: {
         todos: [],
-        newTodo: ''
+        newtodo: ""
     },
     mutations: {
-        GET_TODO(state, todo) {
-            state.newTodo = todo
-        },
-        ADD_TODO(state) {
+        ADD_TODO(state, todo) {
             state.todos.push({
-                text: state.newTodo
-            })
-        },
-        CLEAR_TODO(state) {
-            state.newTodo = ''
+                text: todo
+            });
+            state.newtodo = todo;
         }
     },
     actions: {
-        getTodo({ commit }, todo) {
-            commit('GET_TODO', todo)
-        },
-        addTodo({ commit }) {
-            commit('ADD_TODO')
-        },
-        clearTodo({ commit }) {
-            commit('CLEAR_TODO')
+        addTodo({ commit }, todo) {
+            commit('ADD_TODO', todo)
         }
         // also possible
         // addTodo = function(store){

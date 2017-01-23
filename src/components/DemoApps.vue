@@ -2,6 +2,7 @@
     <div class="container">
         <createTodo></createTodo>
         <CurrentTodos></CurrentTodos>
+        <latestTodo></latesttodo>
         <todoList></todolist>
         <users></users>
         <issues></issues>
@@ -14,6 +15,7 @@
     import Issues from './apps/Issues'
     import createTodo from './apps/createTodo'
     import CurrentTodos from './apps/CurrentTodos'
+    import latestTodo from './apps/latestTodo'
 
     export default {
         name: 'demoApps',
@@ -22,7 +24,8 @@
             Users,
             Issues,
             createTodo,
-            CurrentTodos
+            CurrentTodos,
+            latestTodo
         }
     }
 </script>
