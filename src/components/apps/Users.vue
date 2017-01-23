@@ -1,5 +1,6 @@
 <template>
-     <div>
+     <div class="jumbotron">
+        <h2>Json API Demo</h2>
          <input type="text" id="inputSearch" class="form-control" v-model="filterText">
          <table class="table">
              <tr>

@@ -1,5 +1,6 @@
 <template>
-     <div>
+     <div class="jumbotron">
+         <h2>Todo List Demo</h2>
          <form id="todoForm" class="form-inline margin-bottom">
             <div class="group-group">
                 <input type="text" name="" v-model="todo" id="input1/(\w+)/\u\1/g" class="form-control" value="" required="required" pattern="" title="">

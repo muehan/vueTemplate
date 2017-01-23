@@ -9,6 +9,8 @@
     import Navigation from './components/Navigation'
     import DemoApps from './components/DemoApps'
 
+    import Bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
+
     export default {
         name: 'app',
         components: {

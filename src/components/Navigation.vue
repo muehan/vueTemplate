@@ -55,8 +55,6 @@
 </template>
 
 <script>
-    import Bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
-
     export default {
         name: 'navigation',
         data() {

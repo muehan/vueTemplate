@@ -1,26 +1,24 @@
 <template>
     <div class="container">
-        <div class="jumbotron">
-            <h2>Todo List Demo</h2>
-            <todoList></todolist>
-        </div>
+        
+      <todoList></todolist>
+      <users></users>
+      <issues></issues>
 
-        <div class="jumbotron">
-            <h2>Json API Demo</h2>
-            <users></users>
-        </div>
     </div>
 </template>
 
 <script>
-    import TodoList from './TodoList'
-    import Users from './Users'
+    import TodoList from './apps/TodoList'
+    import Users from './apps/Users'
+    import Issues from './apps/Issues'
 
     export default {
         name: 'demoApps',
         components: {
             TodoList,
-            Users
+            Users,
+            Issues
         }
     }
 </script>
