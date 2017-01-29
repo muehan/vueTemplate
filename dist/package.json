@@ -1,0 +1,10 @@
+{
+    "name": "vuetemplate_heroko",
+    "version": "1.0.0",
+    "description": "vuetemplate and heroko test",
+    "author": "tdc@gmx.ch",
+    "private": true,
+    "scripts": {
+        "postinstall": "npm install express"
+    }
+}
